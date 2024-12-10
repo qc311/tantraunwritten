@@ -1,1 +1,385 @@
-# tantraunwritten
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tantra (Un)Written</title>
+    <style>
+        body {
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            gap: 20px;
+            border-color: white;
+            background-color: black;
+            color: white;
+            font-size: 0.6em;
+            margin: 0;
+            padding: 0;
+            background: url('./background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .typewriter {
+            text-align: center;
+        }
+        .typewriter h1, .typewriter h2 {
+            overflow: hidden;
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: .15em;
+            animation: typing 3.5s steps(30, end), blink-caret .75s step-end infinite;
+            font-family: 'Courier New', Courier, monospace;
+            color: white;                 
+    
+        }
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: orange; }
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .gallery img {
+            width: 100%;
+            cursor: pointer;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 10px;
+            border: 1px solid #888;
+            width: 80%;
+            font-family: 'Courier New', Courier, monospace;
+            max-width: 800px; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center; 
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .gallery img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+            max-height: 200px;  
+            max-width: 200px;
+            cursor: pointer;
+        }
+        textarea {
+            height: 300px;
+            width: 90%;
+            margin-top: 10px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.5em;
+            color: black;
+            padding: 0px;
+            border: 0px;
+            resize: none;
+            overflow-y: auto;        
+            overflow-x: hidden;      
+            white-space: pre-wrap;   
+            outline: none;
+            caret-color: transparent;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="typewriter">
+        <h1>tantra (un)written</h1>
+        <h2>an AI's meditation storybook</h2>
+    </div>
+    <div class="gallery">
+        <img src="image1.jpg" alt="Image 1" onclick="openModal('modal1')">
+        <img src="image2.jpg" alt="Image 2" onclick="openModal('modal2')">
+        <img src="image3.jpg" alt="Image 3" onclick="openModal('modal3')">
+        <img src="image4.jpg" alt="Image 4" onclick="openModal('modal4')">
+        <img src="image5.jpg" alt="Image 5" onclick="openModal('modal5')">
+        <img src="image6.jpg" alt="Image 6" onclick="openModal('modal6')">
+    </div>
+
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <h2>Title 1</h2>
+            <p>Text body entry 1</p>
+            <textarea id="textBox1" rows="4" cols="50">
+In the heart of the village of Eshlore, where the land stretched endlessly in tones of muted green, there was a peculiar pool known only as "The Veil." Its black surface shimmered, not with the stillness of water, but with undulating waves as though it held a restless spirit beneath.
+
+Old myths said the pool was the remnant of a tear in the world, stitched closed by time yet never quite healing. The white rim around it was no ordinary shoreline—it was said to be the edges of a gash through reality, encased by threads of an ancient fabric, woven by the hands of forgotten gods.
+
+Only the bravest dared approach The Veil, for it was believed to whisper secrets to those who leaned close. Secrets of the past, the present, and the futures that could never be. One legend told of a boy, no older than ten, who had wandered there on a moonlit night, his curious heart yearning for the truth. When the villagers found him days later, his eyes held the shimmer of the pool itself, and he spoke of endless oceans and stars beneath the ground. His words turned to silence, and he was never the same again.
+
+Today, the pool rests quietly, its ripples beckoning. The faint number "22" etched in an ancient corner of the surrounding rock hints at something more—a message, perhaps, or a forgotten countdown. Those who pass by often stop to wonder but quickly turn away, feeling the weight of unseen eyes on their backs.
+
+And so, The Veil persists, its mystery untold, guarding its truths for the one who dares to claim them.
+
+(primordial waters)
+                </textarea>
+        </div>
+    </div>
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <h2>Title 2</h2>
+            <p>Text body entry 2</p>
+            <textarea id="textBox2" rows="4" cols="50">
+In a forgotten corner of the world, deep within the ruins of an ancient temple, there existed a strange artifact known as the River of Realms. It was a circular chart, weathered with time, etched with vibrant patterns of red and gold, crisscrossed by black, serpentine lines that flowed like rivers across its surface. No one alive knew its purpose, and those who stumbled upon it could only speculate about its origin.
+
+Legend had it that the artifact was not merely a depiction but a portal—a guide to an unseen reality where each winding line was a pathway to a different dimension. The ancient symbols scrawled along the edges and through its core were said to be spells or warnings, but their meaning was long lost to history.
+
+One stormy night, a wanderer named Elen stumbled upon the temple while seeking refuge from the rain. She was no scholar or seeker of wisdom—just a traveler whose curiosity often led her into forgotten places. By the dim light of her lantern, she saw the River of Realms hanging on the wall, its intricate details almost alive under the flickering light.
+
+As she traced the black, wavy lines with her eyes, she felt an inexplicable pull, as though the artifact was watching her in return. Her fingers brushed against the chart’s surface, and suddenly, the temple around her faded into darkness.
+
+When the light returned, Elen found herself standing on the edge of a vast, cosmic river. The rivers from the chart were now real, their black currents shimmering with stars and strange, glowing shapes. She stood on a narrow stone bridge that stretched infinitely into the distance, and the air thrummed with energy.
+
+Looking around, she saw the rivers dividing and converging, some flowing into radiant golden skies, others disappearing into dark, swirling voids. Above her, celestial patterns danced, echoing the red and gold lines from the chart. At each crossroads along the rivers were gates—doorways to other realms. Each gate bore a symbol from the chart, glowing faintly, as though awaiting her choice.
+
+Elen hesitated, unsure of where to go, but the bridge beneath her feet began to move, carrying her forward. She realized she wasn’t in control—this was her journey, dictated by the paths she had walked in life, the choices she had made, and the ones she had yet to face.
+
+As she traveled, she glimpsed into the realms beyond the gates. One was a world of endless forests, where golden leaves whispered secrets. Another was a land of fire and ash, where shadows moved with purpose. A third was a realm of pure light, so bright it seemed to pulse with its own consciousness.
+
+Finally, the bridge stopped at a gate marked by the faintest glow. Unlike the others, this one was unassuming, almost hidden in the vast expanse. Elen felt a strange familiarity, as though she had been here before. She stepped through, and the world dissolved once more.
+
+She awoke back in the temple, the chart still hanging before her. But something was different. The black rivers on the chart now seemed to flow, their lines shifting subtly as if alive. The experience had changed her—she couldn’t say how, but she felt lighter, as though she carried a piece of the cosmic river within her.
+
+From that day, Elen became a guide, leading other wanderers to the temple and sharing her story. Some believed her, while others dismissed it as a dream. But late at night, when she sat alone under the stars, she would close her eyes and hear the faint hum of the rivers, flowing endlessly through the realms of existence.
+
+And she would smile, knowing she had glimpsed something eternal.
+
+(Kshetra/field)
+                </textarea>
+        </div>
+    </div>
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal3')">&times;</span>
+            <h2>Title 3</h2>
+            <p>Text body entry 3</p>
+            <textarea id="textBox3" rows="4" cols="50">
+In the small Himalayan village of Surya Path, tucked between snow-capped peaks and ancient forests, there was a legend of the "Echo of Aum." The symbol, a perfect spiral of sound waves forming the sacred syllable, was not a carving or drawing—it was said to have emerged from the earth itself, vibrating into existence when the cosmos aligned in perfect harmony.
+
+No one knew when it first appeared. Some claimed it was as old as the mountains, a mark left by the first utterance of the universe. Others believed it materialized during a celestial convergence centuries ago, when the planets aligned, and the heavens sang the primal sound of creation: "Aum."
+
+To the villagers, the symbol was more than sacred. It was believed to be alive, pulsating with the energy of existence itself. Only the most devoted seekers dared to approach it, and only during sunrise, when the golden light illuminated its lines. The stories said that meditating at its center could reveal the mysteries of the cosmos, but at a cost—many who tried returned with blank stares, unable to articulate what they had experienced. A few never returned at all.
+
+Aditi, a young woman with a restless heart, was captivated by the stories. She had grown up listening to her grandmother's tales, the old woman’s voice trembling with reverence. "The Echo of Aum is the breath of the universe, child," her grandmother would say. "To hear it is to understand everything. But remember, not all truths are easy to bear."
+
+One crisp morning, Aditi decided it was her time. Armed only with her courage and a deep longing for answers, she climbed the trail leading to the sacred site. The journey was arduous; the path twisted through dense forests and over rocky ridges. As she climbed higher, the air grew thinner, but her resolve only deepened.
+
+When she finally arrived, the sight took her breath away. The symbol lay on a flat expanse of earth, etched as though by invisible hands. Its curves were perfect, each line radiating a subtle energy. The air around it was still, almost reverent, as if the world itself acknowledged the sanctity of the place.
+
+Aditi stepped into the center of the symbol, her heartbeat echoing in her ears. She sat cross-legged, closed her eyes, and began to chant. Her voice trembled at first, but as the syllable "Aum" escaped her lips, it seemed to resonate with the world around her. The ground beneath her vibrated faintly, the air grew warm, and a deep hum filled her senses.
+
+Suddenly, she was no longer on the mountain. She was everywhere and nowhere, her consciousness expanding beyond the limits of her body. She saw galaxies swirling like the lines of the Aum, their spirals mirroring the sacred symbol. She felt the heartbeat of stars, the silence of the void, and the infinite rhythm that connected them all. Time dissolved; past, present, and future folded into a single eternal moment.
+
+Then came the voice—not a sound, but a vibration that spoke directly to her soul. "All is one," it said. "The breath you take, the light of the stars, the pulse of the earth—they are all threads of the same tapestry."
+
+Tears streamed down Aditi’s face as the enormity of the truth settled within her. She saw her life, her village, and even her fears as tiny yet significant notes in the grand symphony of existence.
+
+When she opened her eyes, the world was unchanged, yet it felt profoundly different. The sun was rising, its golden light touching the edges of the symbol. She stood, feeling lighter, as though a great burden had been lifted.
+
+When she returned to the village, the people noticed a quiet power in her gaze. She didn’t speak of what she had seen—some truths, she knew, were meant to be experienced, not explained. But her presence became a source of peace for others, as if she carried the hum of the universe within her.
+
+The Echo of Aum remained, its mystery intact, waiting patiently for the next seeker brave enough to listen.
+
+(the seed syllable of Om)
+            </textarea>
+        </div>
+    </div>
+    <div id="modal4" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal4')">&times;</span>
+            <h2>Title 4</h2>
+            <p>Text body entry 4</p>
+            <textarea id="textBox4" rows="4" cols="50">
+The temple was older than memory, its stone walls weathered by centuries of winds and whispered secrets. Few knew of its existence, hidden in a jungle where twisted roots and strangling vines devoured all but the most determined explorers. But for those who stumbled upon it, the prize was a promise of power beyond comprehension. Yet none entered unchallenged, for three fearsome guardians awaited any who dared approach the Eternal Gate.
+
+At the topmost tier of the gate's entrance loomed Shesha, the Five-Headed Serpent King. His enormous coils wound around a stone pedestal, scales shimmering like molten ivory under the sun's glare. Five heads, each crowned in gold, swayed hypnotically, their ruby eyes unblinking. The air around Shesha vibrated with a low, constant hum—the sound of his restless, shifting mass. Each head spoke in unison, their forked tongues flicking as they hissed:
+
+“Who dares seek the gate? Choose your words carefully, for we are five minds who crave one answer. Deceive us, and your bones will join the dust beneath us.”
+
+One wrong response, one moment of hesitation, and Shesha’s coils would snap forward like a whip, squeezing intruders until their lungs gave out and their bodies fell limp.
+
+Those who survived Shesha’s challenge moved down to the second guardian, Varaha, the Azure Boar. His hide was an unnatural shade of deep blue, glistening like wet ink. Muscles rippled beneath his skin, his tusks curving skyward, sharp enough to pierce steel. The ground shook with every impatient stomp of his hooves, a reminder of the raw strength barely contained within his massive frame.
+
+Varaha’s breath steamed in the air, his voice like a bellow from the depths of a volcano:
+
+“Show me your will. Stand firm, or I’ll scatter your remains across the jungle for the vultures to feast.”
+
+If an intruder flinched, faltered, or dared show fear, Varaha would charge—a streak of blue fury—flattening them with a force that could shatter stone pillars. The unlucky ones left behind nothing but bloody smears on the temple steps.
+
+Beyond Varaha, at the base of the gate, waited Kurma, the Ancient Tortoise. He was deceptively serene, his golden-brown shell etched with spiraling patterns that seemed to twist and writhe when glanced at too long. His eyes, dark and fathomless, glimmered with something ancient and calculating.
+
+Unlike the others, Kurma did not speak. He simply watched. Silent. Unmoving. For those who reached him, time warped. Hours could pass in seconds, or seconds in hours. Patience was his arena. Many challengers fell to their knees, clawing at their own minds as the torturous stillness consumed them. Only those who understood how to hold their nerve against the slow crawl of madness would see Kurma, finally, lift a single claw and nod. A signal to proceed.
+
+Past the guardians lay the Eternal Gate, a massive obsidian archway covered in a language no living soul could read. Beyond it was the prize: a realm where reality bent to the will of those who proved themselves worthy. Knowledge. Power. Immortality.
+
+But for every soul who walked through the gate, a hundred more fed the jungle’s hungry shadows, their fates sealed by the three keepers who let no unworthy mortal pass.
+
+(Dash-avatara)
+            </textarea>  
+        </div>
+    </div>
+    <div id="modal5" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal5')">&times;</span>
+            <h2>Title 5</h2>
+            <p>Text body entry 5</p>
+            <textarea id="textBox5" rows="4" cols="50">
+By the time Leda found the stone, her feet were raw, her throat blistered, and her thoughts teetered on the edge of delirium. The desert stretched around her, infinite and hostile. The sun, a merciless white disc, bore down on her shoulders. For days, she had followed the whispers—soft, intrusive things that slithered into her ears when she tried to sleep. “You need to know.”
+
+When she first saw it, half-buried in the sand, she almost laughed. It was just a smooth, gray stone—oval, unremarkable, and out of place against the endless dunes. The wind had uncovered it just enough to catch the sunlight, reflecting a dull, cold gleam.
+
+Her cracked lips parted. “Is this what you led me to?”
+
+The whispers didn’t answer. They never did.
+
+She dropped to her knees. Her muscles screamed, but the exhaustion was irrelevant now. What mattered was the stone. It radiated a chill that licked at her fingers when she reached for it—a stark contrast to the searing heat that had dominated her world for days. The closer her hand came, the sharper her thoughts became. Her memories crystallized: the battlefield strewn with the bodies of her soldiers, their faces twisted in shock and agony. The shame that burned deeper than any wound. The bitter weight of failure.
+
+“Show me,” she whispered.
+
+She pressed her palm against the cold surface.
+
+The desert fell away.
+
+Leda was standing in the middle of a grand hall. Banners bearing her sigil—a silver wolf on a field of midnight blue—hung from the stone rafters. Torches blazed in golden sconces. The air vibrated with the rhythm of hundreds of voices chanting her name: “Leda! Leda!”
+
+She looked down and saw herself clad in polished armor. Gold filigree traced the edges of her breastplate. At her hip hung a sword she recognized instantly: Astra, the blade of her ancestors. Her fingers curled around the hilt, feeling its reassuring weight.
+
+She walked forward, and the crowd parted. Faces of soldiers and friends she had watched die on the battlefield now beamed at her, eyes bright with admiration. Her heart surged with joy so raw it made her breath catch.
+
+At the end of the hall, a throne carved from onyx and steel awaited her. This was her kingdom. Her legacy. She had done it—won when everything had seemed lost. Her fingers tingled as she reached for the hilt of Astra, preparing to swear the oath that would seal this reality forever.
+
+Then the hall shuddered.
+
+Cracks spiderwebbed across the stone floor, splintering outward from her feet. The banners caught fire. The cheers turned to screams. Her soldiers’ faces warped in horror, eyes wide with betrayal. The throne crumbled into ash.
+
+The weight of her armor grew unbearable. She gasped for breath as it melted into molten gold, searing her skin. Astra fell from her hand, clanging uselessly against the stone before disintegrating into dust. The heat, the noise, the agony—it all rose to a fever pitch.
+
+And just like that, it was gone.
+
+(Brahmānda/the cosmic egg)
+            </textarea>
+        </div>
+    </div>
+    <div id="modal6" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal6')">&times;</span>
+            <h2>Title 6</h2>
+            <p>Text body entry 6</p>
+            <textarea id="textBox5" rows="4" cols="50">
+
+In the shadow of the ancient temple, Karun hesitated. The wind carried the scent of aged stone and the faint, bitter tang of incense. Before him stood a mural—a depiction carved into the sandstone wall. A red spiral wound upward, twisting toward infinity, intersecting with a hexagram at the base. His father, the last of the temple guardians, had once told him: “The spiral is not a symbol. It is a door.”
+
+But Karun had laughed off such stories. Until now.
+
+He clenched his fingers. The ritual was real, the path before him undeniable. He had seen the town vanish into fire and smoke. He had felt the heat clawing at his back. There were no choices left; only the ritual remained—a gamble with fate itself.
+
+Taking a breath that seared his lungs, Karun knelt before the mural and touched the red spiral. The wall shivered under his fingertips. The sandstone lost its grainy solidity and softened, rippling like liquid. He pressed harder, and the surface yielded. A current of energy pulled him inward.
+
+The world inverted.
+
+When his vision cleared, Karun was standing on a narrow bridge, suspended in endless dark. The bridge was a thin thread of red stone, pulsing with a heartbeat he could feel in his bones. Around him, spirals of light twisted and danced, vast yet insubstantial. They whispered in languages older than the stars.
+
+The path beneath his feet stretched forward, ending at a massive emerald hexagram—its edges glowed like molten copper. At its center hovered a small, shallow bowl. A single lotus petal floated within, trembling slightly, as though it sensed him.
+
+“To walk the spiral is to offer everything,” his father had warned. “It takes your essence and offers you a chance to reshape it.”
+
+Karun took his first step. The bridge vibrated, responding to his presence. One step became ten, then a hundred. The spirals above and below him tightened, pressing in like coiled serpents. His mind filled with fragments of his past: his mother’s laughter, the smell of rice fields in the rain, the cries of his people as the fires consumed their homes.
+
+With each memory, the bridge narrowed.
+
+Halfway across, his foot slipped. The darkness yawned beneath him—a void that pulsed with hunger. He scrambled back, heart pounding, but the bridge continued to shrink.
+
+“You cannot carry everything,” the spirals whispered.
+
+His chest heaved. He understood now: the bridge demanded sacrifice.
+
+Karun closed his eyes. He took the memory of his mother’s smile and gently released it. The laughter faded from his mind, replaced by a cold emptiness. The bridge widened.
+
+He moved forward.
+
+One by one, he shed his memories—the warmth of friendships, the pride of youthful victories, the bitterness of failure. Each step stripped him bare, hollowing out the person he had been. The bridge grew sturdier, but his heart felt like a shell.
+
+At last, he reached the emerald hexagram. The bowl awaited him, the lone lotus petal trembling in its center.
+
+Karun knelt. He could feel his hollowed-out memories swirling behind him, waiting for the moment to reclaim him forever.
+
+“One truth remains,” the spirals whispered. “Offer it.”
+
+A tear traced down his cheek. He had one memory left—the image of his father, standing before this same mural, eyes full of both fear and hope.
+
+He let it go.
+
+The moment he released it, his body dissolved. His consciousness expanded, becoming part of the spirals themselves—twisting, winding, a part of everything and nothing.
+
+The hexagram flared. The lotus petal turned to gold and drifted upward, carrying his essence to a place beyond time.
+
+And on the other side of the mural, the fires of the world began to recede.
+
+(Garbhaputa/cavity of the womb)
+            </textarea>
+        </div>
+    </div>
+
+    <div id="originalPlateModal" class="modal" style="display: none;">
+        <span class="close" onclick="togglePlateLabels()">&times;</span>
+        <textarea readonly>Original plate labels go here...</textarea>
+    </div>
+    
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        function typewriterEffect(textBox, text, index = 0, speed = 50) {
+            if (index < text.length) {
+            textBox.value += text.charAt(index);
+            setTimeout(() => typewriterEffect(textBox, text, index + 1, speed), speed);
+            }
+
+        };
+    </script>
+</body>
+</html></div>
