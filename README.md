@@ -1,5 +1,5 @@
 Live Website: https://qc311.github.io/tantraunwritten/
-Tech: HTML, CSS, JavaScript | Tools: VS Code
+Tech: HTML, CSS, JavaScript
 
 Tantra (Un)written is a web-based artwork that reinterprets tantric philosophy through contemporary computational media. Using AI-generated fiction as a speculative archival method, the project stages an alternative archive composed of six tantric narratives developed from curated visual and textual source materials. Through this structure, it examines how both analog and digital archives encode bias, omission, mediation, and interpretive authority.
 
